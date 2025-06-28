@@ -47,9 +47,7 @@ project-folder/
 
 ### Imperial Units (ft, lbs)
 
-\[
-\text{BMI} = \frac{703 \times \text{weight (lbs)}}{(\text{height (ft)} \times 12)^2}
-\]
+**BMI = (703 × weight in lbs) / (height in ft × 12)²**
 
 > Only feet is used for height input. It is internally converted to inches.
 
