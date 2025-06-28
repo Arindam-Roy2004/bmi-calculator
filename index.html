@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <style>
+        /* Reset box model and spacing for all elements */
+        * {
+            box-sizing: border-box; /* Ensures padding/border don't affect width/height */
+            margin: 0;              /* Removes default margin */
+            padding: 0;             /* Removes default padding */
+        }
+        /* Body styling for layout and appearance */
+        body {
+            font-family: Arial, sans-serif;      /* Clean, readable font */
+            background-color: #f4f4f4;           /* Light gray background for contrast */
+            color: #333;                         /* Dark text for readability */
+            display: flex;                       /* Flexbox for centering */
+            justify-content: center;             /* Center horizontally */
+            align-items: center;                 /* Center vertically */
+            height: 100vh;                       /* Full viewport height */
+        }
+        /* Container for the calculator */
+        .container {
+            width: 400px;                        /* Fixed width for consistent layout */
+            padding: 28px 32px;                  /* Space inside the container */
+            background: #c2d1d9;                    /* White background for content */
+            border-radius: 18px;                 /* Rounded corners for modern look */
+            box-shadow: 0 18px 32px rgba(82, 86, 90, 0.12); /* Subtle shadow for depth */
+            text-align: center;                  /* Center text inside container */
+        }
+        /* Headings styling */
+        h1, h2 {
+            /* margin-bottom: 20px;                 Space below headings */
+            color: #2d5c88;                      /* Blue color for emphasis */
+            letter-spacing: 0.5px;                 /* Slight spacing for readability */
+        }
+        /* Label styling */
+        label {
+            display: block;                      /* Each label on its own line */
+            font-weight: bold;                   /* Make labels stand out */
+        }
+        /* Input and select fields styling */
+        input, select {
+            width: 100%;                         /* Full width for alignment */
+            padding: 10px;                       /* Comfortable click/tap area */
+            margin-bottom: 10px;                 /* Space below each field */
+            border: 1px solid #ccc;              /* Light border for definition */
+            border-radius: 4px;                  /* Slightly rounded corners */
+            font-size: 16px;                     /* Easy-to-read text */
+        }
+        button{
+            width: 25%;
+            padding: 10px;
+            background-color: #6200ea;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #calculate-btn{
+            margin-bottom: 10px;
+        }
+        button:hover {
+            background-color: #3700b3;           /* Darker shade on hover for feedback */
+        }
+        p{
+            margin: 10px 0;                      /* Space around paragraphs */
+            font-size: 18px;                    /* Slightly larger text for results */
+            font-weight: bolder;
+        }
+        /* Utility class to hide elements */
+        .hidden {
+            display: none;                     /*Used to hide result section initially*/
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Body Mass Index (BMI) Calculator</h1>
+        <div id="bmi-input">
+            <label for="unit">Units</label>
+            <select id="unit">
+                <option value="metric">Metric (cm, kg)</option>
+                <option value="imperial">Imperial (fts, lbs)</option>
+            </select>
+            <label for="height"><span>Your Height</span></label>
+            <input type="number" id="height" placeholder="Enter your height" required>
+            <label for="weight"><span>Your Weight</span></label>
+            <input type="number" id="weight" placeholder="Enter your weight" required>
+            <button id="calculate-btn">
+                Calculate BMI
+            </button>
+        </div>
+        <div id="bmi-result" class="hidden">
+            <h2>Your BMI Result</h2>
+            <p id="bmi-output"></p>
+            <p id="bmi-category"></p>
+            <button id="reset-btn">Reset</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
