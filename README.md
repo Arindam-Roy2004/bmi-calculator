@@ -37,9 +37,7 @@ project-folder/
 
 ### Metric Units (cm, kg)
 
-\[
-\text{BMI} = \frac{\text{weight (kg)}}{(\text{height (m)})^2}
-\]
+**BMI = weight in kg / (height in meters)²**
 
 > Conversion: height in meters = height in cm / 100
 
