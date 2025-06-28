@@ -77,10 +77,3 @@ project-folder/
 - CSS
 - JavaScript (Vanilla)
 
----
-
-## 📬 License
-
-This project is free to use and modify for educational or personal use.
-
----
